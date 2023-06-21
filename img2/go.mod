@@ -1,4 +1,4 @@
-module github.com/xerjs/ubw
+module ubw/img2
 
 go 1.19
 
