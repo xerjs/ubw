@@ -34,7 +34,7 @@ func AppAction(c *cli.Context) error {
 	}
 	defer outFile.Close()
 
-	err = handler.Encode(outFile, imgFormat, &img2)
+	err = handler.Encode(outFile, imgFormat, img2)
 	if err != nil {
 		panic(err)
 	}
@@ -50,6 +50,7 @@ func main() {
 		&cli.StringFlag{
 			Name:     "input",
 			Required: true,
+			Aliases:  []string{"i"},
 			Usage:    "image file path",
 		},
 		&cli.IntFlag{
@@ -62,6 +63,7 @@ func main() {
 		&cli.StringFlag{
 			Name:     "output",
 			Required: true,
+			Aliases:  []string{"o"},
 		},
 	}
 	app.Action = AppAction

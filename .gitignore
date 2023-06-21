@@ -3,3 +3,5 @@ vendor
 *.png
 *.jpg
 *.jpeg
+img2/img2
+dist/
